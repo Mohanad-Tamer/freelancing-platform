@@ -1,0 +1,67 @@
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.5rem;
+  border-radius: 1rem;
+  font-family: "Geist", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  border: none;
+  gap: 0.5rem;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-regular {
+  background-color: var(--background);
+  color: var(--foreground);
+  border: 1px solid color-mix(in srgb, var(--foreground), transparent 80%);
+}
+
+.button-regular:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground), transparent 90%);
+  border-color: color-mix(in srgb, var(--foreground), transparent 60%);
+}
+
+.button-destructive {
+  background-color: var(--accent);
+  color: var(--background);
+}
+
+.button-destructive:not(:disabled):hover {
+  filter: brightness(1.1);
+}
+
+.button-text {
+  background-color: transparent;
+  color: var(--foreground);
+  opacity: 0.6;
+  padding: 0.6rem 1rem;
+}
+
+.button-text:not(:disabled):hover {
+  opacity: 1;
+  background-color: color-mix(in srgb, var(--foreground), transparent 95%);
+}
+
+.button-icon-only {
+  background-color: transparent;
+  color: var(--foreground);
+  border: none;
+  padding: 0.75rem;
+  line-height: 0;
+  opacity: 0.6;
+}
+
+.button-icon-only:not(:disabled):hover {
+  background-color: transparent;
+  border: none;
+  opacity: 1;
+}

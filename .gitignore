@@ -1,0 +1,11 @@
+.netlify
+.vendor
+.agent
+.agents
+/docs
+dev.bat
+
+# Environment files
+!.env.example
+config.bat
+node_modules

@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #eef1f9;
+  --foreground: #08090b;
+  --accent: #ff6b53;
+}
+
+.dark {
+  --background: #08090b;
+  --foreground: #eef1f9;
+  --accent: #ff6b53;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  transition: color 0.2s ease;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: var(--foreground);
+  opacity: 0.75;
+}
+a:hover {
+  color: var(--foreground);
+  opacity: 1;
+}
+
+hr {
+  width: 75%;
+  border: 1px solid var(--foreground);
+  opacity: 0.1;
+  margin: 1rem auto;
+}
+
+hr .vertical {
+  width: 1px;
+  height: 75%;
+  transform: rotate(90deg);
+}
+
+@font-face {
+  font-family: "Playfair Display Italic";
+  src: url("./assets/fonts/PlayfairDisplay\ Variable\ Italic.ttf");
+}
+
+@font-face {
+  font-family: "Playfair Display Regular";
+  src: url("./assets/fonts/PlayfairDisplay\ Variable\ Regular.ttf");
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("./assets/fonts/Geist\ Variable.ttf");
+}
+
+.spin {
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
