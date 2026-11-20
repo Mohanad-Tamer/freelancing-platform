@@ -6,6 +6,6 @@
 dev.bat
 
 # Environment files
+.env
 !.env.example
-config.bat
 node_modules
